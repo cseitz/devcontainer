@@ -25,7 +25,8 @@
         { "icon": "docs", "extensions": [".docs"] },
         { "icon": "src", "extensions": ["projects"] },
         { "icon": "cli", "extensions": [".cli"] },
-        { "icon": "node", "extensions": [".pnpm"] }
+        { "icon": "node", "extensions": [".pnpm"] },
+        { "icon": "devcontainer", "extensions": ["dev"] }
     ],
     "vsicons.associations.files": [
         { "icon": "nginx", "extensions": ["docker/server/nginx/*"] },
@@ -33,7 +34,8 @@
             "eslintrc.node.json"
         ], "filename": true },
         { "icon": "docker", "extensions": [
-            "compose.dev.yml"
+            "compose.dev.yml",
+            "services.yml"
         ], "filename": true },
         { "icon": "tsconfig", "extensions": [
             "tsconfig/tsconfig.base.json",

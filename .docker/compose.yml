@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+
+  postgres:
+    extends:
+      file: ./services.yml
+      service: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+
+  redis:
+    extends:
+      file: ./services.yml
+      service: redis
