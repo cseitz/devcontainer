@@ -24,7 +24,8 @@
         { "icon": "cubit", "extensions": ["containers"] },
         { "icon": "docs", "extensions": [".docs"] },
         { "icon": "src", "extensions": ["projects"] },
-        { "icon": "cli", "extensions": [".cli"] }
+        { "icon": "cli", "extensions": [".cli"] },
+        { "icon": "node", "extensions": [".pnpm"] }
     ],
     "vsicons.associations.files": [
         { "icon": "nginx", "extensions": ["docker/server/nginx/*"] },
