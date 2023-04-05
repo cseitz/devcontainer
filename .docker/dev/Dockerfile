@@ -24,16 +24,11 @@ RUN n 19
 # Install global NPM dependencies
 RUN npm i -g tsx pnpm
 
-WORKDIR /opt/container
-COPY .docker/.devcontainer .
+WORKDIR /code
+COPY .docker/dev .
 RUN pnpm install
 
-COPY .docker/.devcontainer/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-
-# COPY startup.sh /root
-# RUN chmod +x /root/startup.sh
-
-# CMD [ "/bin/zsh", "-c", "/root/startup.sh" ]
+COPY .docker/dev/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN mkdir -p /opt/dev
 WORKDIR /opt/dev

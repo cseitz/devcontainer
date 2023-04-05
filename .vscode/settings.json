@@ -30,6 +30,9 @@
     ],
     "vsicons.associations.files": [
         { "icon": "nginx", "extensions": ["docker/server/nginx/*"] },
+        { "icon": "config", "extensions": [
+            "supervisord.conf"
+        ], "filename": true },
         { "icon": "eslint", "extensions": [
             "eslintrc.node.json"
         ], "filename": true },

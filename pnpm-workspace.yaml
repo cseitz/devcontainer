@@ -2,6 +2,7 @@ packages:
   - 'src/packages/*'
   - 'src/services/*'
   - 'src/clients/*'
+  - '.docker/dev'
   - '.docker'
   - '.cli'
   - 'docs'

@@ -1,0 +1,19 @@
+{
+    "name": "devcontainer",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "chokidar": "^3.5.3",
+      "quick-lru": "^6.1.1",
+      "bottleneck": "^2.19.5"
+    },
+    "devDependencies": {
+      "@types/node": "^18.15.11"
+    }
+  }
+  
