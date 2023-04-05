@@ -1,0 +1,42 @@
+{
+    "$schema": "https://turborepo.org/schema.json",
+    "pipeline": {
+        "build": {
+            "dependsOn": ["lint", "^build"],
+            "outputs": [".next/**", "dist/**", ".next-build/**", "dist-build/**"],
+            "inputs": ["src/*.tsx", "src/*.ts", "src/**/*.tsx", "src/**/*.ts", "*.ts", "next.config.mjs"],
+            "cache": true
+        },
+        "prepare": {
+            "dependsOn": [],
+            "outputs": [".next/**", "dist/**", ".next-build/**", "dist-build/**"],
+            "inputs": ["src/*.tsx", "src/*.ts", "src/**/*.tsx", "src/**/*.ts", "*.ts", "next.config.mjs"],
+            "cache": true
+        },
+        "dev": {
+            "dependsOn": [],
+            "cache": false,
+            "outputMode": "none",
+            "persistent": true
+        },
+        "lint": {
+            "cache": true,
+            "inputs": ["src/**/*.tsx", "src/**/*.ts", "next.config.mjs"]
+        },
+        "test": {
+            "cache": true,
+            "inputs": ["src/**/*.tsx", "src/**/*.ts", "next.config.mjs"]
+        },
+        "start": {
+            "dependsOn": ["build"]
+        },
+        "preinstall": {
+            "inputs": ["package.json"]
+        },
+        "stop": {
+            "dependsOn": [],
+            "cache": false,
+            "outputMode": "none"
+        }
+    }   
+}

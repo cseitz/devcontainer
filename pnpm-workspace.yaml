@@ -1,0 +1,7 @@
+packages:
+  - 'src/packages/*'
+  - 'src/services/*'
+  - 'src/clients/*'
+  - '.docker'
+  - '.cli'
+  - 'docs'

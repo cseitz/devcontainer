@@ -1,0 +1,89 @@
+{
+    "vsicons.associations.folders": [
+        { "icon": "middleware", "extensions": ["staff"] },
+        { "icon": "typescript", "extensions": ["tsconfig", "trpc"] },
+        { "icon": "binary", "extensions": ["constants"] },
+        { "icon": "images", "extensions": ["media"] },
+        { "icon": "sso", "extensions": ["authentication", "auth"] },
+        { "icon": "server", "extensions": ["backend"] },
+        { "icon": "e2e", "extensions": ["socket"] },
+        { "icon": "view", "extensions": ["contents"] },
+        { "icon": "app", "extensions": ["web"] },
+        { "icon": "client", "extensions": ["website"] },
+        { "icon": "github", "extensions": ["github"] }, 
+        { "icon": "node", "extensions": ["npm"] },
+        { "icon": "electron", "extensions": ["react"] },
+        { "icon": "log", "extensions": [".github/workflows"] },
+        { "icon": "route", "extensions": ["tools/proxy"] },
+        { "icon": "git", "extensions": ["repos"] },
+        { "icon": "certificate", "extensions": ["permissions"] },
+        { "icon": "docs", "extensions": ["mdx", "mail"] },
+        { "icon": "template", "extensions": ["content"] },
+        { "icon": "controller", "extensions": ["providers"] },
+        { "icon": "bloc", "extensions": ["storage"] },
+        { "icon": "cubit", "extensions": ["containers"] },
+        { "icon": "docs", "extensions": [".docs"] },
+        { "icon": "src", "extensions": ["projects"] },
+        { "icon": "cli", "extensions": [".cli"] }
+    ],
+    "vsicons.associations.files": [
+        { "icon": "nginx", "extensions": ["docker/server/nginx/*"] },
+        { "icon": "eslint", "extensions": [
+            "eslintrc.node.json"
+        ], "filename": true },
+        { "icon": "docker", "extensions": [
+            "compose.dev.yml"
+        ], "filename": true },
+        { "icon": "tsconfig", "extensions": [
+            "tsconfig/tsconfig.base.json",
+            "tsconfig/tsconfig.next.json",
+            "tsconfig/tsconfig.node.json",
+            "tsconfig/tsconfig.react.json"
+        ], "filename": true },
+        { "icon": "npm", "extensions": [
+            "pnpm-lock.yaml",
+            "pnpm-workspace.yaml",
+        ], "filename": true },
+        {
+            "icon": "tsconfig",
+            "extensions": ["src/config.ts"],
+            "filename": true
+        },
+    ],
+    "files.associations": {
+        "**/nginx/**/*.template": "nginx",
+        "**/nginx/includes/**": "nginx",
+        "**/nginx/sites-enabled/**": "nginx",
+        "**/.env.local": "properties",
+    },
+    "typescript.preferences.importModuleSpecifierEnding": "minimal",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/pnpm-workspace.yaml": true,
+        "**/pnpm-lock.yaml": true,
+        "**/next-env.d.ts": true,
+        "**/yarn.lock": true,
+        "**/.next": true,
+        "**/.swc": true,
+        "**/.wireit": true,
+        "**/.turbo": true,
+        "**/build": true,
+        "**/dist": true,
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[jsonc]": {
+        "editor.tabSize": 2
+    },
+    "[json5]": {
+        "editor.tabSize": 2,
+    }
+}
