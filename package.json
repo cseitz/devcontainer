@@ -14,8 +14,12 @@
   ],
   "scripts": {
     "preinstall": "node .vscode/workspace",
-    "dev:up": "docker-compose -f .docker/compose.dev.yml -p turbo-devcontainer-2 up -d --build",
-    "dev:down": "docker-compose -f .docker/compose.dev.yml -p turbo-devcontainer-2 down",
+    "dev": "pnpm dev:up; pnpm dev:exec 'ready && pnpm turbo run dev'",
+    "dev:up": "docker-compose -f .docker/compose.dev.yml up -d --build",
+    "dev:down": "docker-compose -f .docker/compose.dev.yml down",
+    "dev:exec": "docker-compose -f .docker/compose.dev.yml exec dev zsh -c $1",
+    "zsh": "pnpm dev:exec zsh",
+    "turbo": "FORCE_COLOR=1 turbo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

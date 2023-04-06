@@ -1,4 +1,5 @@
 version: '3.9'
+name: turbo-devc-1
 services:
 
   postgres:
@@ -14,12 +15,12 @@ services:
       service: redis
     
   dev:
-    tty: true
+    # tty: true
     build:
       context: ..
       dockerfile: .docker/dev/Dockerfile
     restart: unless-stopped
     volumes:
-      - ..:/data/repo
+      - ..:/data/code
       - ../.vscode/.pnpm:/code/.vscode/.pnpm
 

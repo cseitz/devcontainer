@@ -24,14 +24,17 @@ RUN n 19
 # Install global NPM dependencies
 RUN npm i -g tsx pnpm
 
-WORKDIR /code
+WORKDIR /container
 COPY .docker/dev .
 RUN pnpm install
 
 COPY .docker/dev/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-RUN mkdir -p /opt/dev
-WORKDIR /opt/dev
+COPY .docker/dev/ready.js /bin/ready
+RUN chmod +x /bin/ready
+
+RUN mkdir -p /code
+WORKDIR /code
 
 ENV FORCE_COLOR=1
 

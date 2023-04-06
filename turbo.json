@@ -19,6 +19,17 @@
             "outputMode": "none",
             "persistent": true
         },
+        ":dev": {
+            "dependsOn": [],
+            "cache": false,
+            "outputMode": "none",
+            "persistent": true
+        },
+        "dev:up": {
+            "dependsOn": [],
+            "cache": false,
+            "outputMode": "none"
+        },
         "lint": {
             "cache": true,
             "inputs": ["src/**/*.tsx", "src/**/*.ts", "next.config.mjs"]

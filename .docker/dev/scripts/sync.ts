@@ -32,14 +32,16 @@ async function exec(cmd: string) {
 
 async function rsync() {
     const excludes = ignores.map(o => `--exclude "${o}"`);
-    await exec(`rsync -av ${excludes} ${__volume} ${__local}`);
+    const cmd = `rsync -av ${excludes} ${__volume}/ ${__local}/`;
+    console.log('rsync', { cmd })
+    await exec(cmd);
 }
 
 async function updateIgnores() {
     const isFirst = ignores.length === 0;
     const before = JSON.stringify(ignores);
     ignores = (
-        await readFile(`${__local}/.dockerignore`, 'utf8')
+        await readFile(`${__volume}/.dockerignore`, 'utf8')
     ).split(/\r?\n/);
     return !isFirst || (
         before === JSON.stringify(ignores)
@@ -103,4 +105,9 @@ async function run() {
 }
 
 
+await rsync();
 await run();
+
+setInterval(() => {
+
+}, 1000);
